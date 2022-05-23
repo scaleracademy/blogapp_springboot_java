@@ -42,6 +42,4 @@ public class CommentEntity {
     private UserEntity author;
 
 
-
-
 }

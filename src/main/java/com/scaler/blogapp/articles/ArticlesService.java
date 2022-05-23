@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ArticlesService {
-    private ArticlesRepository articlesRepository;
-    private UsersRepository usersRepository;
+    private final ArticlesRepository articlesRepository;
+    private final UsersRepository usersRepository;
 
     public ArticlesService(ArticlesRepository articlesRepository, UsersRepository usersRepository) {
         this.articlesRepository = articlesRepository;

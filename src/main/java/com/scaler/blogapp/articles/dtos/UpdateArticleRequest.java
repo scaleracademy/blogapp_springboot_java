@@ -2,7 +2,6 @@ package com.scaler.blogapp.articles.dtos;
 
 import lombok.AccessLevel;
 import lombok.Data;
-import lombok.NonNull;
 import lombok.Setter;
 import org.springframework.lang.Nullable;
 
