@@ -5,9 +5,11 @@ import com.scaler.blogapp.users.dtos.CreateUserRequest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@AutoConfigureTestDatabase()
 public class UsersServiceTests {
 
     @Autowired
@@ -24,7 +26,6 @@ public class UsersServiceTests {
 
         Assertions.assertNotNull(user);
         Assertions.assertEquals("john", user.getUsername());
-
 
     }
 }

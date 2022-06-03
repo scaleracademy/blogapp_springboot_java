@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Entity(name = "users")
 @Getter
 @Setter
-@Builder
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
