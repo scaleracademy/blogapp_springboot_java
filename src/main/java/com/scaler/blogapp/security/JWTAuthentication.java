@@ -21,6 +21,11 @@ public class JWTAuthentication implements Authentication {
         return null;
     }
 
+    /**
+     * Returns the credentials of the {@code Authentication} request.
+     * For eg, the password, or the Bearer token, or the cookie
+     * @return
+     */
     @Override
     public String getCredentials() {
         return jwt;
@@ -31,6 +36,12 @@ public class JWTAuthentication implements Authentication {
         return null;
     }
 
+    /**
+     * Returns the principal of the {@code Authentication} request.
+     * The "principal" is the entity that is being authenticated.
+     * In this case it is the User.
+     * @return
+     */
     @Override
     public UserEntity getPrincipal() {
         return userEntity;

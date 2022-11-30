@@ -1,7 +1,6 @@
 package com.scaler.blogapp.security;
 
 import com.scaler.blogapp.users.UsersService;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -29,6 +28,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/users", "/users/login").permitAll()
+                .antMatchers(HttpMethod.GET, "/articles", "/articles/*").permitAll()
                 .anyRequest().authenticated();
 
         http.addFilterBefore(jwtAuthenticationFilter, AnonymousAuthenticationFilter.class);
