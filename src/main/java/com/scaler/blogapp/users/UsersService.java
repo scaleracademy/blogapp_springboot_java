@@ -1,6 +1,7 @@
 package com.scaler.blogapp.users;
 
 
+import com.scaler.blogapp.security.JWTService;
 import com.scaler.blogapp.users.dtos.CreateUserRequest;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;

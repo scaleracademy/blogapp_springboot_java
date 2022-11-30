@@ -13,6 +13,7 @@ import javax.persistence.*;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

@@ -9,4 +9,5 @@ public class UserResponse {
     private String email;
     private String bio;
     private String image;
+    private String token;
 }
